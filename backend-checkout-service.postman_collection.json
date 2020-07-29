@@ -7,6 +7,260 @@
 	},
 	"item": [
 		{
+			"name": "Set Database with Initial Values",
+			"item": [
+				{
+					"name": "adjustItemQuantity - Set Google Home to 10",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c564fc3b-8dca-41b1-ae79-c9847ce3fa41",
+								"exec": [
+									"// This endpoint is used to adjust quantity amounts in the Product\r",
+									"// database\r",
+									"//\r",
+									"//    Sku      Item Name\r",
+									"//  __________________________\r",
+									"//  120P90   Google Home\r",
+									"//  43N23P   MackBookPro\r",
+									"//  A304SD   Alexa Speaker\r",
+									"//  234234   Raspbery Pi B\r",
+									"\r",
+									"var manualSku = '120P90'\r",
+									"var manualAdjustment = 'set'   // valid options [ plus | minus ]\r",
+									"var manualQuantity = 10\r",
+									"\r",
+									"pm.environment.set('sku', manualSku);\r",
+									"pm.environment.set('adjustment', manualAdjustment);\r",
+									"pm.environment.set('quantity', manualQuantity);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{bcs_endpoint}}/adjustItemQuantity/{{sku}}?adjustment={{adjustment}}&quantity={{quantity}}",
+							"host": [
+								"{{bcs_endpoint}}"
+							],
+							"path": [
+								"adjustItemQuantity",
+								"{{sku}}"
+							],
+							"query": [
+								{
+									"key": "adjustment",
+									"value": "{{adjustment}}"
+								},
+								{
+									"key": "quantity",
+									"value": "{{quantity}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adjustItemQuantity - Set MacBook Pro to 5",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "174945ae-67e2-4950-890c-ea3521ced53f",
+								"exec": [
+									"// This endpoint is used to adjust quantity amounts in the Product\r",
+									"// database\r",
+									"//\r",
+									"//    Sku      Item Name\r",
+									"//  __________________________\r",
+									"//  120P90   Google Home\r",
+									"//  43N23P   MackBookPro\r",
+									"//  A304SD   Alexa Speaker\r",
+									"//  234234   Raspbery Pi B\r",
+									"\r",
+									"var manualSku = '43N23P'\r",
+									"var manualAdjustment = 'set'   // valid options [ plus | minus ]\r",
+									"var manualQuantity = 5\r",
+									"\r",
+									"pm.environment.set('sku', manualSku);\r",
+									"pm.environment.set('adjustment', manualAdjustment);\r",
+									"pm.environment.set('quantity', manualQuantity);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{bcs_endpoint}}/adjustItemQuantity/{{sku}}?adjustment={{adjustment}}&quantity={{quantity}}",
+							"host": [
+								"{{bcs_endpoint}}"
+							],
+							"path": [
+								"adjustItemQuantity",
+								"{{sku}}"
+							],
+							"query": [
+								{
+									"key": "adjustment",
+									"value": "{{adjustment}}"
+								},
+								{
+									"key": "quantity",
+									"value": "{{quantity}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adjustItemQuantity - Set Alexa Speakers to 10",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "266d3782-e9db-402d-8dd9-c05ca0dff5cf",
+								"exec": [
+									"// This endpoint is used to adjust quantity amounts in the Product\r",
+									"// database\r",
+									"//\r",
+									"//    Sku      Item Name\r",
+									"//  __________________________\r",
+									"//  120P90   Google Home\r",
+									"//  43N23P   MackBookPro\r",
+									"//  A304SD   Alexa Speaker\r",
+									"//  234234   Raspbery Pi B\r",
+									"\r",
+									"var manualSku = 'A304SD'\r",
+									"var manualAdjustment = 'set'   // valid options [ plus | minus ]\r",
+									"var manualQuantity = 10\r",
+									"\r",
+									"pm.environment.set('sku', manualSku);\r",
+									"pm.environment.set('adjustment', manualAdjustment);\r",
+									"pm.environment.set('quantity', manualQuantity);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{bcs_endpoint}}/adjustItemQuantity/{{sku}}?adjustment={{adjustment}}&quantity={{quantity}}",
+							"host": [
+								"{{bcs_endpoint}}"
+							],
+							"path": [
+								"adjustItemQuantity",
+								"{{sku}}"
+							],
+							"query": [
+								{
+									"key": "adjustment",
+									"value": "{{adjustment}}"
+								},
+								{
+									"key": "quantity",
+									"value": "{{quantity}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adjustItemQuantity - Set Raspberry Pi B to 2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "5fcd69c7-5165-45fe-bca3-81787179f99a",
+								"exec": [
+									"// This endpoint is used to adjust quantity amounts in the Product\r",
+									"// database\r",
+									"//\r",
+									"//    Sku      Item Name\r",
+									"//  __________________________\r",
+									"//  120P90   Google Home\r",
+									"//  43N23P   MackBookPro\r",
+									"//  A304SD   Alexa Speaker\r",
+									"//  234234   Raspbery Pi B\r",
+									"\r",
+									"var manualSku = '234234'\r",
+									"var manualAdjustment = 'set'   // valid options [ plus | minus ]\r",
+									"var manualQuantity = 2\r",
+									"\r",
+									"pm.environment.set('sku', manualSku);\r",
+									"pm.environment.set('adjustment', manualAdjustment);\r",
+									"pm.environment.set('quantity', manualQuantity);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{bcs_endpoint}}/adjustItemQuantity/{{sku}}?adjustment={{adjustment}}&quantity={{quantity}}",
+							"host": [
+								"{{bcs_endpoint}}"
+							],
+							"path": [
+								"adjustItemQuantity",
+								"{{sku}}"
+							],
+							"query": [
+								{
+									"key": "adjustment",
+									"value": "{{adjustment}}"
+								},
+								{
+									"key": "quantity",
+									"value": "{{quantity}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
 			"name": "GoogleHomesPromo",
 			"item": [
 				{
@@ -4834,7 +5088,7 @@
 	],
 	"variable": [
 		{
-			"id": "3dbeb4f2-56d5-4c9f-91c4-a45e08f43d4c",
+			"id": "8a9d3518-dd8c-4d5e-a6f3-839210c5819f",
 			"key": "environment_to_test",
 			"value": "localhost"
 		}
